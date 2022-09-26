@@ -1,0 +1,23 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew="0.19"
+
+navbar = { path = "./src/components/navbar"}
+sidebar = { path = "./src/components/sidebar"}
+footer = { path = "./src/components/footer"}
+article = { path = "./src/pages/article"}
+
+[workspace]
+
+member =[
+    "src/components/navbar",
+    "src/components/footer",
+    "src/components/sidebar",
+    "src/pages/article",
+]
